@@ -1,0 +1,95 @@
+#header {
+  z-index: 1;
+  width: 100%;
+  padding: 4px 16px;
+  transition: background-color 300ms ease, box-shadow 300ms ease;
+
+  .header-content {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    color: $secondary-color;
+    @include clearfix;
+  }
+
+  @media screen and (min-width: 830px) {
+    padding: 10px 24px;
+  }
+
+  @media screen and (min-width: 1039px + 64px) {
+    padding: 10px 0 8px;
+  }
+}
+
+.login-button,
+.signup-button {
+    margin: 0;
+    padding: 1em 1.2em 1em;
+    font-family: $base-font-family;
+    font-weight: $base-font-weight; 
+    border-radius: 5px;
+    background-color: none;
+    border: 1px solid $secondary-color-light;
+    border-radius: 5px;
+    outline: none;
+}
+
+.login-button {
+    margin-left: 8px;
+    margin-right: 16px;
+}
+
+.brand {
+  float: left;
+  margin: 0;
+  text-decoration: none;
+  color: #fff;
+
+  @media screen and (min-width: 580px) {
+    font-size: 32px;
+    padding: 8px 0 px;
+  }
+
+  &-image {
+    display: block;
+    height: 50px;  
+  }
+}
+
+.nav-main {
+  float: right;
+
+  &-item {
+    display: inline-block;
+    margin: 0 8px;
+    font-size: 14px;
+    line-height: 0;
+
+    &:hover {
+      color: #000;
+      border-color: #000;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @media screen and (min-width: 580px) {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (min-width: 580px) {
+    margin-top: 7px;
+  }
+}
+
+.nav-main li a {
+  font-weight: 300;
+  text-decoration: none;
+  color: inherit;
+
+  &:active {
+    color: $secondary-color-dark;
+  }
+}

@@ -1,0 +1,57 @@
+//
+// Header
+//
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  color: $base-font-color;
+  height: 100%;
+}
+
+// 
+// Content
+// 
+
+#content {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 90px;
+}
+
+//
+// Sections
+//
+
+.section {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 40px 16px 60px;
+
+  @media screen and (min-width: 830px) {
+    padding: 40px 32px 60px;
+  }
+
+  @media screen and (min-width: 1039px + 64px) {
+    padding: 40px 0 60px;
+  }
+}
+
+.section-title {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 400;
+
+  @media screen and (min-width: 640px) {
+    font-size: 24px;
+  }
+}
+
+
+
+.section-group {
+  background-color: rgba(168, 168, 168, 0.25);
+  margin: 0;
+}

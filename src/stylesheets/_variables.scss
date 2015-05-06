@@ -1,0 +1,32 @@
+// 
+// Colors
+//
+
+$yellow: true;
+
+$primary-color: if($yellow, #F48E09, #1E5EB6);
+$primary-color-dark: if($yellow, #FFB912, #0D3D6F);
+$primary-color-light: if($yellow, #FFCB00, #4A9FFF);
+$secondary-color: #666666;
+$secondary-color-dark: #333333;
+$secondary-color-light: #B2B2B2;
+
+// 
+// Text
+// 
+
+$base-font-color: $secondary-color-dark;
+$base-font-family: 'Roboto', sans-serif;
+$base-font-size: 20px;
+$base-line-height: 1.42;
+$base-font-weight: 300;
+
+$header-font-color: #4c4c4c;
+$header-font-family: 'Fira Sans', sans-serif;
+$header-font-size: 60px;
+$header-font-weight: 300;
+
+$subheader-font-color: #4c4c4c;
+$subheader-font-family: 'Fira Sans', sans-serif;
+$subheader-font-size: 40px;
+$subheader-font-weight: 300;
