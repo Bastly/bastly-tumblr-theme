@@ -24,11 +24,8 @@ module.exports = {
     dest: dest + "/scripts/",
   },
   markup: {
-    src: src + "/**/*.hbs",
+    src: src + "/**/*.html",
     dest: dest,
-    dataPath: './src/data/main.js',
-    helpersPath: './node_modules/handlebars-layouts/index.js',
-    partialsPath: './src/partials/**/*.hbs'
   },
   iconFonts: {
     name: 'Gulp Starter Icons',
