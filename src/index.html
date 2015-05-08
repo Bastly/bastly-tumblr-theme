@@ -15,9 +15,7 @@
         /* Custom CSS */
         {CustomCSS}
     </style>
-    <script>
-        <!-- @include ../dist/scripts/global.js -->
-    </script>
+    <!-- @include partials/scripts-header.html -->
 </head>
 <body data-urlencoded-name="{URLEncodedName}" class="{select:Layout}{block:IndexPage} index-page{/block:IndexPage}{block:PermalinkPage} permalink{/block:PermalinkPage}{block:SearchPage} search-page{block:NoSearchResults} no-results{/block:NoSearchResults}{/block:SearchPage}{block:HideHeaderImage} no-header-image{/block:HideHeaderImage}{block:NoStretchHeaderImage} contain-header-image{/block:NoStretchHeaderImage}">
     <div id="content" class="container fade-in">
@@ -73,34 +71,7 @@
                                         <a href="{Permalink}" title="{TimeAgo}" class="meta-item post-date">{ShortMonth} {DayOfMonth}{DayOfMonthSuffix}, {Year}</a>
                                     </div>
                                 </section>
-
-                                <section class="post-controls">
-                                    <div class="controls-wrapper">
-                                        <div class="control share-control">
-                                            <nav class="pop">
-                                                <a href="#" class="share selector icon-export"></a>
-                                                <div class="pop-menu share-menu south" id="share_{PostID}">
-                                                    <ul>
-                                                        <li class="open-in-app"><a href="#" class="share-item open-in-app" data-post="{PostID}">Open in app</a></li>
-                                                        <li><a href="http://facebook.com/sharer.php?u={URLEncodedPermalink}&amp;t={URLEncodedTitle}" class="share-item facebook" target="_blank">Facebook</a></li>
-                                                        <li><a href="https://twitter.com/intent/tweet?text={URLEncodedTweetSummary}" class="share-item twitter" target="_blank">Tweet</a></li>
-                                                        {block:Photo}
-                                                        <li><a href="//www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&amp;media={PhotoURL-500}" class="share-item pinterest" target="_blank">Pinterest</a></li>
-                                                        {/block:Photo}
-                                                        {block:Video}{block:VideoThumbnail}
-                                                        <li><a href="//www.pinterest.com/pin/create/button/?url={URLEncodedPermalink}&amp;media={VideoThumbnailURL}&amp;is_video=true" class="share-item pinterest" target="_blank">Pinterest</a></li>
-                                                        {/block:VideoThumbnail}{/block:Video}
-                                                        <li><a href="mailto:?subject={URLEncodedShareString}&amp;body={URLEncodedMailSummary}" class="share-item mail">Mail</a></li>
-                                                        <li><a href="{Permalink}/embed" class="share-item permalink">Embed</a></li>
-                                                        <li><a href="{Permalink}" class="share-item permalink">{lang:Permalink} <i class="icon-arrow_carrot_right"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </nav>
-                                        </div>
-                                        <div class="control reblog-control">{ReblogButton size="21" color="black"}</div>
-                                        <div class="control like-control">{LikeButton size="20" color="black"}</div>
-                                    </div>
-                                </section>
+                            <!-- @include partials/share.html -->
                             </footer>
                         </section>
                         {/block:Date}
@@ -119,7 +90,10 @@
         </section>
         <!-- @include partials/footer.html -->
     </div>
-    <!-- @include partials/scripts.html -->
+    <!-- @include partials/scripts-footer.html -->
+    <script>
+    <!-- @include ../dist/scripts/global.js -->
+    </script>
     <!-- @include partials/analytics.html -->
 </body>
 </html>
